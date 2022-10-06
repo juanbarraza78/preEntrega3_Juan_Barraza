@@ -1,0 +1,467 @@
+/*Variables locales*/
+$ColorFondoPrimario:black;
+$ColorFondoSecundario:black;
+$ColorFondoFooter:rgb(17, 16, 16);
+$ColorTextoPrimario:black;
+$ColorTextoSecundario:black;
+$ColorTextoFooterPrimario:rgb(255, 255, 255);
+$ColorTextoFooterSecundario:rgb(169, 165, 165);
+$TamanioFuenteH1:4rem;
+$TamanioFuenteH2:3rem;
+$TamanioFuenteH3:2rem;
+$TamanioFuenteH4:1rem;
+$TamanioFuenteH5:1rem;
+$SmallXlpx:0px;
+$Smallpx:576px;
+$Mediumpx:768px;
+$largepx:992px;
+$largeXlpx:1200px;
+
+/*Reseteo*/
+*
+{
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+
+/*Global*/
+body
+{
+    background-image: url("../img/Fondo.jpg");
+    background-attachment: fixed;
+    
+}
+
+/*Global Header*/
+.navbar
+{
+    div
+    {
+        a
+        {
+            img
+            {
+                width: 20%;
+            }
+        }
+    }
+}
+
+/*Global Footer*/
+.footer
+{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    background-color: $ColorFondoFooter;
+    color: $ColorTextoFooterPrimario;
+    
+    div
+    {
+        h4
+        {
+            padding-top: 10%;
+        }
+        div
+        {
+            img
+            {
+                width: 8%;
+                margin-right: 5%;
+            }
+            a
+            {
+                text-decoration: none;
+                color: $ColorTextoFooterSecundario;
+            }
+        }
+    }
+    div :hover
+    {
+        color: $ColorTextoFooterPrimario;
+    }
+    .footer_logo, .footer_Copyright
+    {
+        text-align: center;
+        align-self: center;
+    }
+    .footer_logo, .footer_Productos
+    {
+        margin-bottom: 10%;
+    }
+}
+
+@media (max-width: $Smallpx)
+{
+    .footer_logo
+    {
+        grid-column: 2/12;
+    }
+    .footer_Contactos
+    {
+        grid-column: 2/7;
+    }
+    .footer_Productos
+    {
+        grid-column: 7/12;
+    }
+    .footer_Copyright
+    {
+        grid-column: 2/12;
+    }
+}
+
+@media (max-width: $Mediumpx) and (min-width: $Smallpx)
+{
+    .footer_logo
+    {
+        grid-column: 2/12;
+    }
+    .footer_Contactos
+    {
+        grid-column: 2/7;
+    }
+    .footer_Productos
+    {
+        grid-column: 7/12;
+    }
+    .footer_Copyright
+    {
+        grid-column: 2/12;
+    }
+}
+
+@media (min-width: $Mediumpx)
+{
+    .footer_logo
+    {
+        grid-column: 1/3;
+    }
+    .footer_Contactos
+    {
+        grid-column: 4/6;
+    }
+    .footer_Productos
+    {
+        grid-column: 7/9;
+    }
+    .footer_Copyright
+    {
+        grid-column: 10/13;
+    }
+}
+
+/*Inicio*/
+.mainContainer
+{
+    width: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin:0px auto;
+    text-align: center;
+
+    .Seccion1, .Seccion2, .Seccion3, .Seccion4, .Seccion5
+    {
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        div
+        {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            img
+            {
+                width: 100%;
+            }
+        }
+        .div2
+        {
+            h2
+            {
+                font-size: $TamanioFuenteH2;
+            }
+            p
+            {
+                font-size: $TamanioFuenteH4;
+            }
+        }
+        
+    }
+
+}
+
+@media (max-width: $Smallpx)
+{
+    .Seccion1, .Seccion2, .Seccion3, .Seccion4, .Seccion5
+    {
+
+        .div1
+        {
+            grid-column: 2/12;
+        }
+        .div2
+        {
+            grid-column: 2/12;
+        }
+    }
+    .Seccion2, .Seccion4
+    {
+        .div1
+        {
+            grid-column: 2/12;
+        }
+        .div2
+        {
+            grid-column: 2/12;
+        }
+    }
+}
+
+@media (max-width: $Mediumpx) and (min-width: $Smallpx)
+{
+    .Seccion1, .Seccion3, .Seccion5
+    {
+        .div1
+        {
+            grid-column: 1/7;
+        }
+        .div2
+        {
+            grid-column: 7/13;
+        }
+    }
+    .Seccion2, .Seccion4
+    {
+        .div1
+        {
+            grid-column: 7/13;
+            order:2;
+        }
+        .div2
+        {
+            grid-column: 1/7;
+            order:1;
+        }
+    }
+}
+
+@media (min-width: $Mediumpx)
+{
+    .Seccion1, .Seccion3, .Seccion5
+    {
+
+        .div1
+        {
+            grid-column: 1/4;
+        }
+        .div2
+        {
+            grid-column: 4/9;
+        }
+    }
+    .Seccion2, .Seccion4
+    {
+        
+        .div1
+        {
+            grid-column: 10/13;
+            order:2;
+        }
+        .div2
+        {
+            grid-column: 5/10;
+            order:1;
+        }
+    }
+}
+
+/*Contacto*/
+.iframe_maps
+{
+    iframe
+    {
+        width: 100%;
+        height: 85%;
+        margin-top: 4%;
+        min-height: 400px;
+    }
+
+}
+
+.contactos
+{
+    margin-bottom: 5%;
+
+}
+
+/*Productos*/
+#productos
+{
+    h2
+    {
+        color: $ColorTextoPrimario;
+        font-size: $TamanioFuenteH2;
+    }
+
+    .FilaProductos
+    { 
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
+        div
+        {
+            h3
+            {
+                font-size: $TamanioFuenteH3;
+            }
+            img
+            {
+                width: 90%;
+                transition:all 1s;
+            }
+            img:hover
+            {
+                scale: 1.1;
+            }
+
+        }
+    }
+}
+
+@media (max-width: $Smallpx)
+{
+    .FilaProductos
+    {
+        .productos1
+        {
+            grid-column: 2/12;
+        }
+        .productos2
+        {
+            grid-column: 2/12;
+        }
+        .productos3
+        {
+            grid-column: 2/12;
+        }
+        .productos4
+        {
+            grid-column: 2/12;
+        }
+    }
+}
+
+@media (max-width: $Mediumpx) and (min-width: $Smallpx)
+{
+    .productos1
+    {
+        grid-column: 2/6;
+    }
+    .productos2
+    {
+        grid-column: 8/12;
+    }
+    .productos3
+    {
+        grid-column: 2/6;
+    }
+    .productos4
+    {
+        grid-column: 8/12;
+    }
+}
+
+@media (min-width: $Mediumpx)
+{
+    .productos1
+    {
+        grid-column: 1/4;
+    }
+    .productos2
+    {
+        grid-column: 4/7;
+    }
+    .productos3
+    {
+        grid-column: 7/10;
+    }
+    .productos4
+    {
+        grid-column: 10/13;
+    }
+}
+
+/*Quien soy*/
+.quienSoy
+{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    align-items: center;
+    .fotoPerfil
+    {
+        img
+        {
+            width: 100%;
+        }
+    }
+    .descripcionPerfil
+    {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: $Smallpx)
+{
+    .quienSoy
+    {
+        .fotoPerfil
+        {
+            grid-column: 2/12;
+        }
+        .descripcionPerfil
+        {
+            grid-column: 2/12;
+        }
+    }
+}
+
+@media (max-width: $Mediumpx) and (min-width: $Smallpx)
+{
+    .fotoPerfil
+    {
+        grid-column: 2/6;
+    }
+    .descripcionPerfil
+    {
+        grid-column: 8/12;
+    }
+}
+
+@media (min-width: $Mediumpx)
+{
+    .fotoPerfil
+    {
+        grid-column: 2/6;
+    }
+    .descripcionPerfil
+    {
+        grid-column: 8/12;
+    }
+}
+
+/*Metodos de pago*/
+.ComoComprar
+{
+    margin-top: 8%;
+    margin-bottom: 10%;
+}
+

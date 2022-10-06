@@ -1,0 +1,289 @@
+/*Variables locales*/
+/*Reseteo*/
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+/*Global*/
+body {
+  background-image: url("../img/Fondo.jpg");
+  background-attachment: fixed;
+}
+
+/*Global Header*/
+.navbar div a img {
+  width: 20%;
+}
+
+/*Global Footer*/
+.footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: rgb(17, 16, 16);
+  color: rgb(255, 255, 255);
+}
+.footer div h4 {
+  padding-top: 10%;
+}
+.footer div div img {
+  width: 8%;
+  margin-right: 5%;
+}
+.footer div div a {
+  text-decoration: none;
+  color: rgb(169, 165, 165);
+}
+.footer div :hover {
+  color: rgb(255, 255, 255);
+}
+.footer .footer_logo, .footer .footer_Copyright {
+  text-align: center;
+  align-self: center;
+}
+.footer .footer_logo, .footer .footer_Productos {
+  margin-bottom: 10%;
+}
+
+@media (max-width: 576px) {
+  .footer_logo {
+    grid-column: 2/12;
+  }
+  .footer_Contactos {
+    grid-column: 2/7;
+  }
+  .footer_Productos {
+    grid-column: 7/12;
+  }
+  .footer_Copyright {
+    grid-column: 2/12;
+  }
+}
+@media (max-width: 768px) and (min-width: 576px) {
+  .footer_logo {
+    grid-column: 2/12;
+  }
+  .footer_Contactos {
+    grid-column: 2/7;
+  }
+  .footer_Productos {
+    grid-column: 7/12;
+  }
+  .footer_Copyright {
+    grid-column: 2/12;
+  }
+}
+@media (min-width: 768px) {
+  .footer_logo {
+    grid-column: 1/3;
+  }
+  .footer_Contactos {
+    grid-column: 4/6;
+  }
+  .footer_Productos {
+    grid-column: 7/9;
+  }
+  .footer_Copyright {
+    grid-column: 10/13;
+  }
+}
+/*Inicio*/
+.mainContainer {
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin: 0px auto;
+  text-align: center;
+}
+.mainContainer .Seccion1, .mainContainer .Seccion2, .mainContainer .Seccion3, .mainContainer .Seccion4, .mainContainer .Seccion5 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.mainContainer .Seccion1 div, .mainContainer .Seccion2 div, .mainContainer .Seccion3 div, .mainContainer .Seccion4 div, .mainContainer .Seccion5 div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainContainer .Seccion1 div img, .mainContainer .Seccion2 div img, .mainContainer .Seccion3 div img, .mainContainer .Seccion4 div img, .mainContainer .Seccion5 div img {
+  width: 100%;
+}
+.mainContainer .Seccion1 .div2 h2, .mainContainer .Seccion2 .div2 h2, .mainContainer .Seccion3 .div2 h2, .mainContainer .Seccion4 .div2 h2, .mainContainer .Seccion5 .div2 h2 {
+  font-size: 3rem;
+}
+.mainContainer .Seccion1 .div2 p, .mainContainer .Seccion2 .div2 p, .mainContainer .Seccion3 .div2 p, .mainContainer .Seccion4 .div2 p, .mainContainer .Seccion5 .div2 p {
+  font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+  .Seccion1 .div1, .Seccion2 .div1, .Seccion3 .div1, .Seccion4 .div1, .Seccion5 .div1 {
+    grid-column: 2/12;
+  }
+  .Seccion1 .div2, .Seccion2 .div2, .Seccion3 .div2, .Seccion4 .div2, .Seccion5 .div2 {
+    grid-column: 2/12;
+  }
+  .Seccion2 .div1, .Seccion4 .div1 {
+    grid-column: 2/12;
+  }
+  .Seccion2 .div2, .Seccion4 .div2 {
+    grid-column: 2/12;
+  }
+}
+@media (max-width: 768px) and (min-width: 576px) {
+  .Seccion1 .div1, .Seccion3 .div1, .Seccion5 .div1 {
+    grid-column: 1/7;
+  }
+  .Seccion1 .div2, .Seccion3 .div2, .Seccion5 .div2 {
+    grid-column: 7/13;
+  }
+  .Seccion2 .div1, .Seccion4 .div1 {
+    grid-column: 7/13;
+    order: 2;
+  }
+  .Seccion2 .div2, .Seccion4 .div2 {
+    grid-column: 1/7;
+    order: 1;
+  }
+}
+@media (min-width: 768px) {
+  .Seccion1 .div1, .Seccion3 .div1, .Seccion5 .div1 {
+    grid-column: 1/4;
+  }
+  .Seccion1 .div2, .Seccion3 .div2, .Seccion5 .div2 {
+    grid-column: 4/9;
+  }
+  .Seccion2 .div1, .Seccion4 .div1 {
+    grid-column: 10/13;
+    order: 2;
+  }
+  .Seccion2 .div2, .Seccion4 .div2 {
+    grid-column: 5/10;
+    order: 1;
+  }
+}
+/*Contacto*/
+.iframe_maps iframe {
+  width: 100%;
+  height: 85%;
+  margin-top: 4%;
+  min-height: 400px;
+}
+
+.contactos {
+  margin-bottom: 5%;
+}
+
+/*Productos*/
+#productos h2 {
+  color: black;
+  font-size: 3rem;
+}
+#productos .FilaProductos {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2%;
+}
+#productos .FilaProductos div h3 {
+  font-size: 2rem;
+}
+#productos .FilaProductos div img {
+  width: 90%;
+  transition: all 1s;
+}
+#productos .FilaProductos div img:hover {
+  scale: 1.1;
+}
+
+@media (max-width: 576px) {
+  .FilaProductos .productos1 {
+    grid-column: 2/12;
+  }
+  .FilaProductos .productos2 {
+    grid-column: 2/12;
+  }
+  .FilaProductos .productos3 {
+    grid-column: 2/12;
+  }
+  .FilaProductos .productos4 {
+    grid-column: 2/12;
+  }
+}
+@media (max-width: 768px) and (min-width: 576px) {
+  .productos1 {
+    grid-column: 2/6;
+  }
+  .productos2 {
+    grid-column: 8/12;
+  }
+  .productos3 {
+    grid-column: 2/6;
+  }
+  .productos4 {
+    grid-column: 8/12;
+  }
+}
+@media (min-width: 768px) {
+  .productos1 {
+    grid-column: 1/4;
+  }
+  .productos2 {
+    grid-column: 4/7;
+  }
+  .productos3 {
+    grid-column: 7/10;
+  }
+  .productos4 {
+    grid-column: 10/13;
+  }
+}
+/*Quien soy*/
+.quienSoy {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+.quienSoy .fotoPerfil img {
+  width: 100%;
+}
+.quienSoy .descripcionPerfil {
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .quienSoy .fotoPerfil {
+    grid-column: 2/12;
+  }
+  .quienSoy .descripcionPerfil {
+    grid-column: 2/12;
+  }
+}
+@media (max-width: 768px) and (min-width: 576px) {
+  .fotoPerfil {
+    grid-column: 2/6;
+  }
+  .descripcionPerfil {
+    grid-column: 8/12;
+  }
+}
+@media (min-width: 768px) {
+  .fotoPerfil {
+    grid-column: 2/6;
+  }
+  .descripcionPerfil {
+    grid-column: 8/12;
+  }
+}
+/*Metodos de pago*/
+.ComoComprar {
+  margin-top: 8%;
+  margin-bottom: 10%;
+}/*# sourceMappingURL=main.css.map */
