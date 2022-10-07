@@ -2,7 +2,7 @@
 $ColorFondoPrimario:black;
 $ColorFondoSecundario:black;
 $ColorFondoFooter:rgb(17, 16, 16);
-$ColorTextoPrimario:black;
+$ColorTextoPrimario:rgb(43, 28, 28);
 $ColorTextoSecundario:black;
 $ColorTextoFooterPrimario:rgb(255, 255, 255);
 $ColorTextoFooterSecundario:rgb(169, 165, 165);
@@ -28,6 +28,7 @@ $largeXlpx:1200px;
 	text-decoration: none;
 	border: none;
 	outline: none;
+    color: $ColorTextoPrimario;
 }
 
 /*Global*/
@@ -35,7 +36,6 @@ body
 {
     background-image: url("../img/Fondo.jpg");
     background-attachment: fixed;
-    
 }
 
 /*Global Header*/
@@ -65,6 +65,7 @@ body
     {
         h4
         {
+            color: $ColorTextoFooterPrimario;
             padding-top: 10%;
         }
         div
@@ -87,6 +88,10 @@ body
     }
     .footer_logo, .footer_Copyright
     {
+        p
+        {
+            color: $ColorTextoFooterPrimario;
+        }
         text-align: center;
         align-self: center;
     }
@@ -200,7 +205,6 @@ body
 {
     .Seccion1, .Seccion2, .Seccion3, .Seccion4, .Seccion5
     {
-
         .div1
         {
             grid-column: 2/12;

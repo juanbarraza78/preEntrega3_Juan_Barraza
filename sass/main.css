@@ -9,6 +9,7 @@
   text-decoration: none;
   border: none;
   outline: none;
+  color: rgb(43, 28, 28);
 }
 
 /*Global*/
@@ -30,6 +31,7 @@ body {
   color: rgb(255, 255, 255);
 }
 .footer div h4 {
+  color: rgb(255, 255, 255);
   padding-top: 10%;
 }
 .footer div div img {
@@ -46,6 +48,9 @@ body {
 .footer .footer_logo, .footer .footer_Copyright {
   text-align: center;
   align-self: center;
+}
+.footer .footer_logo p, .footer .footer_Copyright p {
+  color: rgb(255, 255, 255);
 }
 .footer .footer_logo, .footer .footer_Productos {
   margin-bottom: 10%;
@@ -181,7 +186,7 @@ body {
 
 /*Productos*/
 #productos h2 {
-  color: black;
+  color: rgb(43, 28, 28);
   font-size: 3rem;
 }
 #productos .FilaProductos {
